@@ -32,20 +32,20 @@ jobs:
           if [[ "$GITHUB_REF" == "refs/heads/dev" ]]; then
             echo "env_name=DEV" >> $GITHUB_OUTPUT
             echo "db_name=${{ secrets.SF_DEV_DATABASE }}" >> $GITHUB_OUTPUT
-            echo "role=${{ secrets.SF_DEV_ROLE }}" >> $GITHUB_OUTPUT
-            echo "warehouse=${{ secrets.SF_DEV_WAREHOUSE }}" >> $GITHUB_OUTPUT
+            echo "role=${{ secrets.SF_ROLE }}" >> $GITHUB_OUTPUT
+            echo "warehouse=${{ secrets.SF_WAREHOUSE }}" >> $GITHUB_OUTPUT
 
           elif [[ "$GITHUB_REF" == "refs/heads/qa" ]]; then
             echo "env_name=QA" >> $GITHUB_OUTPUT
             echo "db_name=${{ secrets.SF_QA_DATABASE }}" >> $GITHUB_OUTPUT
-            echo "role=${{ secrets.SF_QA_ROLE }}" >> $GITHUB_OUTPUT
-            echo "warehouse=${{ secrets.SF_QA_WAREHOUSE }}" >> $GITHUB_OUTPUT
+            echo "role=${{ secrets.SF_ROLE }}" >> $GITHUB_OUTPUT
+            echo "warehouse=${{ secrets.SF_WAREHOUSE }}" >> $GITHUB_OUTPUT
 
           elif [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
             echo "env_name=PROD" >> $GITHUB_OUTPUT
             echo "db_name=${{ secrets.SF_PROD_DATABASE }}" >> $GITHUB_OUTPUT
-            echo "role=${{ secrets.SF_PROD_ROLE }}" >> $GITHUB_OUTPUT
-            echo "warehouse=${{ secrets.SF_PROD_WAREHOUSE }}" >> $GITHUB_OUTPUT
+            echo "role=${{ secrets.SF_ROLE }}" >> $GITHUB_OUTPUT
+            echo "warehouse=${{ secrets.SF_WAREHOUSE }}" >> $GITHUB_OUTPUT
           fi
 
       - name: Install schemachange
