@@ -1,4 +1,4 @@
---! File: 001_create_customer_table.sql
+--! File: 002__create_customer_table.sql
 --! Description: Create schema and customer table in DEV
 --! Deploy: true
 --! Valid: true
